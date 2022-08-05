@@ -18,6 +18,7 @@ public class ForcingTest {
         var source1 = "test/org/holo/forceClosable/testdata/Test1.java";
 
         var compilationHelper = CompilationTestHelper.newInstance(ForcingPlugin.class, getClass());
+        // TODO: add actual tests instead of this show-case example
         compilationHelper.addSourceLines(
                                  source0,
                                  Files.readAllLines(Path.of("src/test/java/" + source0))
