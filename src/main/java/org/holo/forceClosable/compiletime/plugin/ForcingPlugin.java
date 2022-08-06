@@ -25,7 +25,9 @@ import java.util.stream.Stream;
                   Any instance of ForcingClosable or of a class passed by the "-XepOpt:ForcingTry" parameter must be either the returned variable, or inside of a Try-with-Resources clause.
                   If it is a return value, the variable must be explicitly final.
                   """,
-        severity = BugPattern.SeverityLevel.ERROR
+        severity = BugPattern.SeverityLevel.ERROR,
+        linkType = BugPattern.LinkType.CUSTOM,
+        link = "https://github.com/Holo314/forceClosable"
 )
 public class ForcingPlugin
         extends BugChecker
