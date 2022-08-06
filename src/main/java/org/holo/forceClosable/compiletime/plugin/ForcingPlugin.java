@@ -22,8 +22,7 @@ import java.util.stream.Stream;
 @BugPattern(
         name = "ForcingClosable",
         summary = """
-                  Any instance of ForcingClosable or of a class passed by the "-XepOpt:ForcingTry" parameter must be either the returned variable, or inside of a Try-with-Resources clause.
-                  If it is a return value, the variable must be explicitly final.
+                  Any instance of ForcingClosable or of a class passed by the "-XepOpt:ForcingTry" parameter must be inside of a Try-with-Resources clause.
                   """,
         severity = BugPattern.SeverityLevel.ERROR,
         linkType = BugPattern.LinkType.CUSTOM,
