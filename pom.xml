@@ -7,14 +7,14 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.8.2</version>
+            <version>5.9.0</version>
             <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>org.junit.vintage</groupId>
             <artifactId>junit-vintage-engine</artifactId>
-            <version>5.8.2</version>
+            <version>5.9.0</version>
         </dependency>
 
         <dependency>
@@ -58,12 +58,12 @@
 
     <properties>
         <maven.compiler.version>3.10.1</maven.compiler.version>
-        <java.version>19</java.version>
-        <maven.compiler.target>19</maven.compiler.target>
-        <maven.compiler.source>19</maven.compiler.source>
+        <java.version>11</java.version>
+        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <errorprone.version>2.14.0</errorprone.version>
         <argLine>
-            --enable-preview
             --add-exports
             jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED
             --add-exports
@@ -100,7 +100,6 @@
                     <source>${java.version}</source>
                     <target>${java.version}</target>
                     <compilerArgs>
-                        <arg>--enable-preview</arg>
                         <arg>--add-exports</arg>
                         <arg>jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED</arg>
                         <arg>--add-exports</arg>
@@ -122,5 +121,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

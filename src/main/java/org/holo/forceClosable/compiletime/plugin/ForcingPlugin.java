@@ -16,14 +16,13 @@ import org.holo.forceClosable.runtime.ForcingClosable;
 import java.util.Collection;
 import java.util.List;
 import java.util.function.BiPredicate;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 
 @BugPattern(
         name = "ForcingClosable",
-        summary = """
-                  Any instance of ForcingClosable or of a class passed by the "-XepOpt:ForcingTry" parameter must be inside of a Try-with-Resources clause.
-                  """,
+        summary = "Any instance of ForcingClosable or of a class passed by the \"-XepOpt:ForcingTry\" parameter must be inside of a Try-with-Resources clause.",
         severity = BugPattern.SeverityLevel.ERROR,
         linkType = BugPattern.LinkType.CUSTOM,
         link = "https://github.com/Holo314/forceClosable"
@@ -51,7 +50,7 @@ public class ForcingPlugin
                                          return Stream.empty();
                                      }
                                  })
-                                 .toList();
+                                 .collect(Collectors.toList());
         System.out.println();
     }
 
